@@ -10,6 +10,15 @@
 To move a site to a new box, pair the new box with the same site: the old one is disconnected.
 Unpairing a site in the Keep Console resets this box; it shows a new code.
 
+## Shared with keep
+
+The keep page lists every device, grouped by type and room, each with a switch. Only what is switched on is ever sent to keep, and keep can't control anything else, whatever it asks. Switching a device off takes effect immediately, even for a portal that is open.
+
+- A type's switch (for example **Cameras**) applies to all its devices; a device can then be switched differently on its own.
+- New devices follow their type's switch.
+- **Off by default:** cameras, people, device locations, software updates.
+- Only people who can log in to this Home Assistant can change these switches.
+
 ## What the agent can and can't do
 
 keep can read states and history, control devices, manage lock codes and NFC cards, and read automations.

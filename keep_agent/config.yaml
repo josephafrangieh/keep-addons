@@ -1,5 +1,5 @@
 name: keep agent
-version: "0.1.0"
+version: "0.1.1"
 slug: keep_agent
 description: Connects this Home Assistant to keep. It only dials out, so nothing is opened to the internet.
 url: https://github.com/josephafrangieh/keep-addons
@@ -12,7 +12,7 @@ boot: auto
 homeassistant_api: true
 ingress: true
 ingress_port: 8099
-panel_icon: mdi:home-automation
+panel_icon: mdi:alpha-k-box
 panel_title: keep
 options:
   gateway_url: wss://keep-gateway.fly.dev/agent

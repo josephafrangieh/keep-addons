@@ -1,5 +1,5 @@
 name: keep agent
-version: "0.2.0"
+version: "0.3.0"
 slug: keep_agent
 description: Connects this Home Assistant to keep. It only dials out, so nothing is opened to the internet.
 url: https://github.com/josephafrangieh/keep-addons
@@ -10,6 +10,9 @@ image: ghcr.io/josephafrangieh/keep-agent
 startup: application
 boot: auto
 homeassistant_api: true
+# Backups only: make, list and download them (no restore, no add-on or host control).
+hassio_api: true
+hassio_role: backup
 ingress: true
 ingress_port: 8099
 panel_icon: mdi:alpha-k-box

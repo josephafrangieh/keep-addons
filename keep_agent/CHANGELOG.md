@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.0
+
+- **Backups for keep**: Keep staff can make a backup of this Home Assistant from the Keep Console and download it to their computer. Backups hold everything except the media folder, are always password-protected, and go straight from this box to the staff member's browser through a link that works once, for 10 minutes.
+- New permission: the Supervisor's **backup** role (make, list and download backups). The add-on still can't restore backups, manage add-ons or touch the host, and backup services stay blocked for everything else keep sends.
+
 ## 0.2.0
 
 - **Shared with keep**: choose on the keep page which devices keep may see and control, by type or one by one, grouped by room. Anything not shared never leaves the house, and keep can't control it.

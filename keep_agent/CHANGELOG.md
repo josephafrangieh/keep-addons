@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.3
+
+- **Choose each camera's live video stream** on the keep page (under each shared camera), for cameras whose go2rtc stream has a different name (for example a "Living Room" camera whose stream is "ezviz_main"). Automatic matching stays the default.
+
 ## 0.4.2
 
 - Live video finds a camera's go2rtc stream even when the names differ: Frigate's "outdoor_cam" plays go2rtc's "outdoor_main" (full quality; a "_sub" stream only when there's nothing better).

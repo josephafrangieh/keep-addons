@@ -1,5 +1,5 @@
 name: keep agent
-version: "0.5.3"
+version: "0.6.0"
 slug: keep_agent
 description: Connects this Home Assistant to keep. It only dials out, so nothing is opened to the internet.
 url: https://github.com/josephafrangieh/keep-addons
@@ -15,6 +15,11 @@ hassio_api: true
 hassio_role: backup
 ingress: true
 ingress_port: 8099
+# Local access for the keep app on the home Wi-Fi (signed requests only; see DOCS.md).
+ports:
+  8125/tcp: 8125
+ports_description:
+  8125/tcp: keep app on the home network (switch off to use the app through the cloud only)
 panel_icon: mdi:alpha-k-box
 panel_title: keep
 options:

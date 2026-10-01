@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.0
+
+- **Local access for the keep app.** On the home Wi-Fi the app now talks to this box directly: faster, and the home keeps answering when the internet is slow or down. The app shows a pass keep issued while online; the pass lists exactly which devices that person may see and control, and every request and answer is signed, so nobody else on the network can use or imitate it. Sharing choices on the keep page and the blocked services still apply. Uses port 8125 on the home network; switch it off in the add-on's Network settings to use the app through the cloud only.
+
 ## 0.5.3
 
 - Clearer recordings: when Frigate has already deleted a detection's video (it keeps video for fewer days than snapshots), keep now says "This clip is no longer on the box" instead of Home Assistant's "500" error.

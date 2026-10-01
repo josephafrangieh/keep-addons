@@ -24,6 +24,15 @@ The keep page lists every device, grouped by type and room, each with a switch. 
 keep can read states and history, control devices, manage lock codes and NFC cards, and read automations.
 The agent refuses services that could damage the box whatever the cloud asks: Supervisor and backups, updates, restarts, history purges, shell and script commands, raw MQTT, and Z-Wave/Zigbee network management.
 
+## The keep app at home
+
+On the home network the keep app talks to this box directly on port **8125**, without going through the internet. It still needs the internet once to sign in and receive its pass; after that, lights, locks, climate and cameras keep working at home even when the internet is down.
+
+- A pass belongs to one person and one home, lists exactly what they may see and control, and expires after three days (the app renews it whenever it's online). Changing someone's role, removing them, or republishing the home's dashboard in keep cuts off older passes.
+- Every request is signed with a key that never travels on the home network, and every answer is signed back.
+- What people do locally is kept on the box and handed to keep, so it appears in the account's activity.
+- To turn it off, set the port to empty under the add-on's **Network** settings. The app then always goes through keep's cloud.
+
 ## Options
 
 | Option | Default | Meaning |

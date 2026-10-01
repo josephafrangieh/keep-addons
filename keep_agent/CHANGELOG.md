@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.2
+
+- Fix: recordings' snapshots and clips failed ("Home Assistant answered 500") where Home Assistant's Frigate media proxy doesn't work. The agent now reads them from Frigate directly on the box (found by itself, or set **frigate_url** in the options), and uses Home Assistant's proxy only as a fallback.
+
 ## 0.5.1
 
 - Fix: recordings didn't open with some versions of the Frigate integration ("not a valid option at decode_json").

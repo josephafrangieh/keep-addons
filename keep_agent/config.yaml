@@ -1,5 +1,5 @@
 name: keep agent
-version: "0.5.1"
+version: "0.5.2"
 slug: keep_agent
 description: Connects this Home Assistant to keep. It only dials out, so nothing is opened to the internet.
 url: https://github.com/josephafrangieh/keep-addons
@@ -26,3 +26,5 @@ schema:
   # Optional: go2rtc's address for live video, when it isn't found by itself
   # (Frigate's built-in go2rtc and the go2rtc add-on are found automatically).
   go2rtc_url: url?
+  # Optional: Frigate's address for recordings' pictures and clips, when it isn't found by itself.
+  frigate_url: url?

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.0
+
+- **Camera recordings**: keep shows Frigate's detections (what was seen and when) for shared Frigate cameras, with their snapshots, and plays or downloads their clips. Read through Home Assistant's Frigate integration; clips go from this box straight to the viewer through a one-time link, and keep never stores them. A recording can only be reached through the camera it belongs to.
+- go2rtc running on Home Assistant's own host (like the go2rtc add-on) is now found by itself: no go2rtc_url needed in most cases.
+
 ## 0.4.5
 
 - Fix: the keep page stayed empty ("Loading…", no status) since 0.4.3, because of a broken quote in its script. Its script is now checked by the tests before every release.

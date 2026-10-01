@@ -1,5 +1,5 @@
 name: keep agent
-version: "0.5.0"
+version: "0.5.1"
 slug: keep_agent
 description: Connects this Home Assistant to keep. It only dials out, so nothing is opened to the internet.
 url: https://github.com/josephafrangieh/keep-addons

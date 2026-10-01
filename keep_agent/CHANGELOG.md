@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.1
+
+- Fix: recordings didn't open with some versions of the Frigate integration ("not a valid option at decode_json").
+
 ## 0.5.0
 
 - **Camera recordings**: keep shows Frigate's detections (what was seen and when) for shared Frigate cameras, with their snapshots, and plays or downloads their clips. Read through Home Assistant's Frigate integration; clips go from this box straight to the viewer through a one-time link, and keep never stores them. A recording can only be reached through the camera it belongs to.

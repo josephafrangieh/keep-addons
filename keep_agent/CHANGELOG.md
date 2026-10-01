@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.5
+
+- Fix: the keep page stayed empty ("Loading…", no status) since 0.4.3, because of a broken quote in its script. Its script is now checked by the tests before every release.
+
 ## 0.4.4
 
 - Fix: the keep page could stay on "Loading…" after 0.4.3. The device list no longer waits for the box to look for go2rtc; camera stream choices load on their own, in 4 seconds at most, and a go2rtc that isn't there is remembered for a minute.

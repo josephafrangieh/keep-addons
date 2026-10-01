@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.1
+
+- Fix: backups made from keep stayed "running" with "the keep agent add-on needs its backup permission". The add-on's backup permission covers backups but not the Supervisor's job tracker, so keep now follows each backup by its name in the backup list. No new permission needed.
+
 ## 0.3.0
 
 - **Backups for keep**: Keep staff can make a backup of this Home Assistant from the Keep Console and download it to their computer. Backups hold everything except the media folder, are always password-protected, and go straight from this box to the staff member's browser through a link that works once, for 10 minutes.

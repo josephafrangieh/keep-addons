@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.2
+
+- Live video finds a camera's go2rtc stream even when the names differ: Frigate's "outdoor_cam" plays go2rtc's "outdoor_main" (full quality; a "_sub" stream only when there's nothing better).
+- Keep staff can see what the box found for each camera (go2rtc address, matching stream), to set things up faster.
+
 ## 0.4.1
 
 - **Live video straight from go2rtc**: Frigate cameras (which Home Assistant itself can't stream) now play live. The agent finds go2rtc on the box by itself (Frigate's built-in go2rtc or the go2rtc add-on) and matches each camera to its stream by its Frigate name. If yours lives elsewhere, set its address in the add-on's **go2rtc_url** option.

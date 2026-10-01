@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.4
+
+- Fix: the keep page could stay on "Loading…" after 0.4.3. The device list no longer waits for the box to look for go2rtc; camera stream choices load on their own, in 4 seconds at most, and a go2rtc that isn't there is remembered for a minute.
+
 ## 0.4.3
 
 - **Choose each camera's live video stream** on the keep page (under each shared camera), for cameras whose go2rtc stream has a different name (for example a "Living Room" camera whose stream is "ezviz_main"). Automatic matching stays the default.

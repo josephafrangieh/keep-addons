@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.1
+
+- **Live video straight from go2rtc**: Frigate cameras (which Home Assistant itself can't stream) now play live. The agent finds go2rtc on the box by itself (Frigate's built-in go2rtc or the go2rtc add-on) and matches each camera to its stream by its Frigate name. If yours lives elsewhere, set its address in the add-on's **go2rtc_url** option.
+
 ## 0.4.0
 
 - **Cameras in keep**: snapshots and live video for cameras you share on the keep page (cameras stay private until you switch them on).

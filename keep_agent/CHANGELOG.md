@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.0
+
+- **Cameras in keep**: snapshots and live video for cameras you share on the keep page (cameras stay private until you switch them on).
+- Live video uses Home Assistant's own engine (WebRTC): keep only introduces the viewer's device to this box; the video goes directly between them and is never stored by keep.
+- Unsharing a camera ends anyone's live view of it at once; a live view lasts 15 minutes at most, and 4 can run at the same time.
+
 ## 0.3.1
 
 - Fix: backups made from keep stayed "running" with "the keep agent add-on needs its backup permission". The add-on's backup permission covers backups but not the Supervisor's job tracker, so keep now follows each backup by its name in the backup list. No new permission needed.

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.3
+
+- Clearer recordings: when Frigate has already deleted a detection's video (it keeps video for fewer days than snapshots), keep now says "This clip is no longer on the box" instead of Home Assistant's "500" error.
+
 ## 0.5.2
 
 - Fix: recordings' snapshots and clips failed ("Home Assistant answered 500") where Home Assistant's Frigate media proxy doesn't work. The agent now reads them from Frigate directly on the box (found by itself, or set **frigate_url** in the options), and uses Home Assistant's proxy only as a fallback.

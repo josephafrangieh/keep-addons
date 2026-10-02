@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.0
+
+- **Automations from the keep app.** A home's owner can make simple automations in the app (when everyone has left, when someone arrives, at a time, at sunset or sunrise). keep sends the box a description and the box writes the Home Assistant automation itself, named "keep – …" and marked as managed by keep. Only devices shared with keep can be used, and only safe actions: lights, switches and fans on or off, shutters open or closed, doors locked, the alarm armed, scenes. Automations can't unlock a door, disarm the alarm or open a garage door.
+
 ## 0.7.0
 
 - **Who is home, for automations.** People who turn on "Share when I'm home" in the keep app now appear in Home Assistant: `binary_sensor.keep_<name>_home` for each of them, `binary_sensor.keep_anyone_home` and `sensor.keep_people_home`. Use them like any sensor, for example "when no one is home for 5 minutes, arm the alarm". The app tells keep only when someone arrives or leaves, never where they are. The home's location comes from Home Assistant (Settings → System → General).

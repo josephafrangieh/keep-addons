@@ -33,6 +33,32 @@ On the home network the keep app talks to this box directly on port **8125**, wi
 - What people do locally is kept on the box and handed to keep, so it appears in the account's activity.
 - To turn it off, set the port to empty under the add-on's **Network** settings. The app then always goes through keep's cloud.
 
+## Who is home
+
+People who turn on **Share when I'm home** in the keep app are published here, for automations:
+
+| Entity | Meaning |
+| --- | --- |
+| `binary_sensor.keep_<name>_home` | On while that person is home. Keeps its id if they're renamed. |
+| `binary_sensor.keep_anyone_home` | On while at least one of them is home. Attributes: `people` (who), `not_sharing` (members who haven't turned it on, so aren't counted). |
+| `sensor.keep_people_home` | How many are home. |
+
+The phone notices arriving and leaving the circle around the home's location (from Home Assistant: Settings → System → General → Location), usually within a few minutes, even with the app closed. keep receives only "arrived" or "left", never where the person is. A person who stops sharing or leaves the home disappears from these entities.
+
+Example: arm the alarm when everyone has been gone for 5 minutes.
+
+```yaml
+triggers:
+  - trigger: state
+    entity_id: binary_sensor.keep_anyone_home
+    to: "off"
+    for: "00:05:00"
+actions:
+  - action: alarm_control_panel.alarm_arm_away
+    target:
+      entity_id: alarm_control_panel.home
+```
+
 ## Options
 
 | Option | Default | Meaning |

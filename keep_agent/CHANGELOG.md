@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.0
+
+- **Who is home, for automations.** People who turn on "Share when I'm home" in the keep app now appear in Home Assistant: `binary_sensor.keep_<name>_home` for each of them, `binary_sensor.keep_anyone_home` and `sensor.keep_people_home`. Use them like any sensor, for example "when no one is home for 5 minutes, arm the alarm". The app tells keep only when someone arrives or leaves, never where they are. The home's location comes from Home Assistant (Settings → System → General).
+
 ## 0.6.0
 
 - **Local access for the keep app.** On the home Wi-Fi the app now talks to this box directly: faster, and the home keeps answering when the internet is slow or down. The app shows a pass keep issued while online; the pass lists exactly which devices that person may see and control, and every request and answer is signed, so nobody else on the network can use or imitate it. Sharing choices on the keep page and the blocked services still apply. Uses port 8125 on the home network; switch it off in the add-on's Network settings to use the app through the cloud only.

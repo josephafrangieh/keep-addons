@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.0
+
+- **Thermostat programs.** In the keep app, a thermostat can have presets with a temperature for when someone is home and one for when everyone is away, and a weekly schedule in 30-minute slots. The box runs it, so it keeps working without internet: it applies each slot's preset, holds a temperature set by hand until the next slot (or until "Resume schedule"), and switches keep's presets between home and away. On a Versatile Thermostat, Frost/Eco/Comfort/Boost stay its own presets: keep writes their temperatures to it and selects them. Switched-off heating is left alone.
+
 ## 0.8.0
 
 - **Automations from the keep app.** A home's owner can make simple automations in the app (when everyone has left, when someone arrives, at a time, at sunset or sunrise). keep sends the box a description and the box writes the Home Assistant automation itself, named "keep – …" and marked as managed by keep. Only devices shared with keep can be used, and only safe actions: lights, switches and fans on or off, shutters open or closed, doors locked, the alarm armed, scenes. Automations can't unlock a door, disarm the alarm or open a garage door.

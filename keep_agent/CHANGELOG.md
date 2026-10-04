@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.10.0
+
+- **Heating and cooling presets.** A thermostat's program now has a heating plan and a cooling plan, each with its own presets, default and weekly schedule. The box follows the plan of the thermostat's mode: switching between heat and cool starts the other plan at once, and auto, dry, fan or off run no plan. On a Versatile Thermostat, cooling presets edit its cooling (AC) temperatures. Programs saved with 0.9.0 become the heating plan.
+
 ## 0.9.0
 
 - **Thermostat programs.** In the keep app, a thermostat can have presets with a temperature for when someone is home and one for when everyone is away, and a weekly schedule in 30-minute slots. The box runs it, so it keeps working without internet: it applies each slot's preset, holds a temperature set by hand until the next slot (or until "Resume schedule"), and switches keep's presets between home and away. On a Versatile Thermostat, Frost/Eco/Comfort/Boost stay its own presets: keep writes their temperatures to it and selects them. Switched-off heating is left alone.

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.11.0
+
+- **Device schedules.** In the keep app, an owner can give an on/off device (a water heater's switch, a pump, a light, a fan) a weekly schedule in 30-minute slots: on where painted, off elsewhere. The box runs it, so it keeps working without internet. A device switched by hand keeps that until the schedule's next change (or until "Resume schedule"); a paused schedule switches nothing.
+
 ## 0.10.0
 
 - **Heating and cooling presets.** A thermostat's program now has a heating plan and a cooling plan, each with its own presets, default and weekly schedule. The box follows the plan of the thermostat's mode: switching between heat and cool starts the other plan at once, and auto, dry, fan or off run no plan. On a Versatile Thermostat, cooling presets edit its cooling (AC) temperatures. Programs saved with 0.9.0 become the heating plan.

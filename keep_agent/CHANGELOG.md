@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.13.0
+
+- **Camera pictures in notifications.** A notification can carry a camera's picture: add `camera: camera.front_door` to a `keep_notify` event (or choose a camera for a standard notification, such as the doorbell, in keep). The box takes the picture at that moment and sends it with the notification; tapping it opens the camera in the app. Only cameras shared with keep can be used. If the camera doesn't answer within 8 seconds, the notification goes without its picture.
+
 ## 0.12.0
 
 - **Notifications.** The box passes notifications from the home to keep, which sends them to the right people's phones. Any Home Assistant automation can send one by firing the event `keep_notify` (with a `channel`, a `title` and a `message`). keep's standard notifications (alarm, water leak, smoke, gas, opened while away, doorbell, unlocked at night) are written by the box as Home Assistant automations named "keep – Notify: …", watching only devices shared with keep. A notification fired while the internet is down is sent once it's back, if it's less than 30 minutes old.

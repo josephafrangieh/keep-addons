@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.12.0
+
+- **Notifications.** The box passes notifications from the home to keep, which sends them to the right people's phones. Any Home Assistant automation can send one by firing the event `keep_notify` (with a `channel`, a `title` and a `message`). keep's standard notifications (alarm, water leak, smoke, gas, opened while away, doorbell, unlocked at night) are written by the box as Home Assistant automations named "keep – Notify: …", watching only devices shared with keep. A notification fired while the internet is down is sent once it's back, if it's less than 30 minutes old.
+
 ## 0.11.0
 
 - **Device schedules.** In the keep app, an owner can give an on/off device (a water heater's switch, a pump, a light, a fan) a weekly schedule in 30-minute slots: on where painted, off elsewhere. The box runs it, so it keeps working without internet. A device switched by hand keeps that until the schedule's next change (or until "Resume schedule"); a paused schedule switches nothing.

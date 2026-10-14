@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.14.0
+
+- **Heating and cooling history.** keep can show when each thermostat was heating, cooling, idle or off (its `hvac_action`), not only its mode, for the History page's "Heating & cooling" card. It works with any thermostat that reports what it's doing, including Versatile Thermostat over a radiator valve, an oil heater's switch or an AC. Only thermostats shared with keep.
+
 ## 0.13.0
 
 - **Camera pictures in notifications.** A notification can carry a camera's picture: add `camera: camera.front_door` to a `keep_notify` event (or choose a camera for a standard notification, such as the doorbell, in keep). The box takes the picture at that moment and sends it with the notification; tapping it opens the camera in the app. Only cameras shared with keep can be used. If the camera doesn't answer within 8 seconds, the notification goes without its picture.

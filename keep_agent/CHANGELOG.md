@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.14.1
+
+- **Fix: live video through Home Assistant could close the keep app.** When live video goes through Home Assistant's own WebRTC (no go2rtc found on the box), its network candidates name their fields in snake_case; the box passed them on with empty fields, and the iPhone app closed. The box now reads both spellings and never sends an empty field.
+
 ## 0.14.0
 
 - **Heating and cooling history.** keep can show when each thermostat was heating, cooling, idle or off (its `hvac_action`), not only its mode, for the History page's "Heating & cooling" card. It works with any thermostat that reports what it's doing, including Versatile Thermostat over a radiator valve, an oil heater's switch or an AC. Only thermostats shared with keep.

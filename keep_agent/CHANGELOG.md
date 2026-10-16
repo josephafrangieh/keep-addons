@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.15.0
+
+- **Widgets that update within seconds.** When the alarm (armed, disarmed, going off), a lock, a garage door or gate, or a door or window sensor changes, the box tells keep, which asks the phones' keep widgets to refresh at once instead of when iOS gets round to it. Changes close together go as one; the alarm goes out almost immediately. Only devices shared with keep, only real state changes; nothing is queued while the box is offline.
+
 ## 0.14.1
 
 - **Fix: live video through Home Assistant could close the keep app.** When live video goes through Home Assistant's own WebRTC (no go2rtc found on the box), its network candidates name their fields in snake_case; the box passed them on with empty fields, and the iPhone app closed. The box now reads both spellings and never sends an empty field.

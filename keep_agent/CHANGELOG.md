@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.16.0
+
+- **Weather forecast cards.** keep can show a weather entity's forecast (the next hours, or the next days) on the app's dashboard, from Home Assistant's own weather integration (Met.no by default). Only weather entities shared with keep.
+
 ## 0.15.0
 
 - **Widgets that update within seconds.** When the alarm (armed, disarmed, going off), a lock, a garage door or gate, or a door or window sensor changes, the box tells keep, which asks the phones' keep widgets to refresh at once instead of when iOS gets round to it. Changes close together go as one; the alarm goes out almost immediately. Only devices shared with keep, only real state changes; nothing is queued while the box is offline.

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.16.1
+
+- **Fewer "Resume schedule" for nothing.** A Versatile Thermostat that changes its own preset for a while (safety mode when a temperature sensor goes quiet, which battery TRVs do; a window open; power shedding) is no longer taken for a change by hand: the schedule carries on. A difference also has to last half a minute to count. The add-on's log now says what keep expected and what it saw when it does count one.
+
 ## 0.16.0
 
 - **Weather forecast cards.** keep can show a weather entity's forecast (the next hours, or the next days) on the app's dashboard, from Home Assistant's own weather integration (Met.no by default). Only weather entities shared with keep.

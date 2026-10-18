@@ -33,6 +33,15 @@ On the home network the keep app talks to this box directly on port **8125**, wi
 - What people do locally is kept on the box and handed to keep, so it appears in the account's activity.
 - To turn it off, set the port to empty under the add-on's **Network** settings. The app then always goes through keep's cloud.
 
+## Wall panels
+
+Wall panels (a Shelly Wall Display, a tablet) open the panel page this box serves on the same port: **http://<box address>:8125**. They need no keep account and keep working when the internet is down.
+
+- A new panel shows a 6-character code. Keep staff type it in keep's admin (the home, then **Panels**) to pair it with this home.
+- Pairing is the only time the panel's secret crosses the home network. After that the box gives the panel its passes itself, for exactly what keep allows that panel.
+- Removing a panel in keep's admin makes the box forget it as soon as the box is online.
+- Turning off port 8125 turns off wall panels too.
+
 ## Who is home
 
 People who turn on **Share when I'm home** in the keep app are published here, for automations:

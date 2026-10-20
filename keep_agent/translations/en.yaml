@@ -1,0 +1,16 @@
+configuration:
+  gateway_url:
+    name: Gateway address
+    description: Where the box connects to keep. Leave as it is unless keep tells you otherwise.
+  log_level:
+    name: Log level
+    description: How much the add-on writes to its log.
+  allow_updates:
+    name: Let keep install updates
+    description: Keep staff may install Home Assistant's updates (Core, OS, add-ons, integrations) from keep's admin, one at a time, after a backup. Turn off to manage updates yourself.
+  go2rtc_url:
+    name: go2rtc address
+    description: Only if live video isn't found by itself (Frigate's built-in go2rtc and the go2rtc add-on are).
+  frigate_url:
+    name: Frigate address
+    description: Only if recordings aren't found by itself.

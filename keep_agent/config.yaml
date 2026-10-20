@@ -1,5 +1,5 @@
 name: keep agent
-version: "0.18.0"
+version: "0.19.0"
 slug: keep_agent
 description: Connects this Home Assistant to keep. It only dials out, so nothing is opened to the internet.
 url: https://github.com/josephafrangieh/keep-addons
@@ -25,9 +25,12 @@ panel_title: keep
 options:
   gateway_url: wss://keep-gateway.fly.dev/agent
   log_level: info
+  # Keep staff may install Home Assistant's updates (Core, OS, add-ons…) from keep's admin.
+  allow_updates: true
 schema:
   gateway_url: match(^wss://.+)
   log_level: list(debug|info|warn|error)
+  allow_updates: bool
   # Optional: go2rtc's address for live video, when it isn't found by itself
   # (Frigate's built-in go2rtc and the go2rtc add-on are found automatically).
   go2rtc_url: url?

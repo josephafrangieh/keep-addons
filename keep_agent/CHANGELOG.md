@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.19.0
+
+- **Updates from keep's admin.** Keep staff can see the updates Home Assistant offers on this box (Core, the OS, the Supervisor, add-ons, integrations, device firmware) and install them, one at a time, after a backup where Home Assistant can make one. Only what Home Assistant itself offers; nothing else of updates is reachable. A new setting, **Let keep install updates** (on), lets the home's owner keep updates to themselves.
+
 ## 0.18.0
 
 - **Notification pictures stay on the box.** A camera's picture for a notification is kept here for 24 hours and fetched by keep only when a phone shows the notification; nothing of it is stored in keep's cloud any more.

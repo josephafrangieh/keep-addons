@@ -23,6 +23,7 @@ The keep page lists every device, grouped by type and room, each with a switch. 
 
 keep can read states and history, control devices, manage lock codes and NFC cards, and read automations.
 The agent refuses services that could damage the box whatever the cloud asks: Supervisor and backups, updates, restarts, history purges, shell and script commands, raw MQTT, and Z-Wave/Zigbee network management.
+The one exception, while **Let keep install updates** is on: Keep staff may install an update Home Assistant itself offers (Core, OS, add-ons, integrations, firmware), after a backup where it can make one. Never a chosen version, never anything else.
 
 ## The keep app at home
 
@@ -74,6 +75,7 @@ actions:
 | --- | --- | --- |
 | `gateway_url` | `wss://keep-gateway.fly.dev/agent` | keep's gateway. Change only if keep asks you to. |
 | `log_level` | `info` | `debug` shows each request. |
+| `allow_updates` | `true` | **Let keep install updates**: Keep staff may install Home Assistant's updates from keep's admin. Turn off to manage updates yourself. |
 
 ## Privacy
 

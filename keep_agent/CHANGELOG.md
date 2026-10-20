@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.18.0
+
+- **Notification pictures stay on the box.** A camera's picture for a notification is kept here for 24 hours and fetched by keep only when a phone shows the notification; nothing of it is stored in keep's cloud any more.
+- **The box is the record of who is home.** keep now sends only the arrivals and departures the box hasn't had yet (it ignores a report older than what it knows), and reads who is home from the box for the app's Home & away screen.
+
 ## 0.17.0
 
 - **Wall panels.** The box now serves keep's panel page on the home network (port 8125), for shared screens such as a Shelly Wall Display or a tablet. A new panel shows a code; Keep staff pair it from keep's admin. Paired panels get their passes from the box itself, so they keep working without internet. Removing a panel in keep makes the box forget it.

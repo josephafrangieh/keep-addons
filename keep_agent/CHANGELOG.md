@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.20.2
+
+- **Remote support: dashboards load.** A page that loads many files at once (dashboards with custom cards) no longer fails with "Error while loading page lovelace": its requests wait their turn on the box instead of being refused past 64. Home Assistant Cloud's status, which every page reads, is no longer refused (signing in to it and turning its remote access on still are). The page reporting its own errors is no longer listed in the session's log.
+
 ## 0.20.1
 
 - **"Check for updates" from keep's admin really checks.** Home Assistant now looks for new versions first (the Supervisor reloads the add-on store and the Core, OS and Supervisor versions, then every update entity refreshes, like Home Assistant's own Check for updates), so a release published since its last automatic check shows up at once.

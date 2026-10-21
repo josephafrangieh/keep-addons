@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.20.1
+
+- **"Check for updates" from keep's admin really checks.** Home Assistant now looks for new versions first (the Supervisor reloads the add-on store and the Core, OS and Supervisor versions, then every update entity refreshes, like Home Assistant's own Check for updates), so a release published since its last automatic check shows up at once.
+
 ## 0.20.0
 
 - **Remote support, only when you allow it.** Keep staff can work in this Home Assistant (to add a sensor, change a setting) only after the home's owner approves their request in the keep app and types the code the staff member gives them, until the time the owner sets or until they end it. The box makes a Home Assistant user for each session and deletes it at the end; the screen travels through the box's own connection to keep, with no port opened and no VPN. Cameras stay private unless the owner allows them for that session; backup downloads, new users or tokens, and shell add-ons are always refused. What was done is recorded on the box only. New settings: **Allow remote support** (on) and `ha_url` (only if Home Assistant serves https itself).

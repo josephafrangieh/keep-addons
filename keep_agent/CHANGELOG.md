@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.20.3
+
+- **Check for updates finds new add-on versions.** Home Assistant refuses to pass "look for updates" on for an add-on, so the agent now asks the Supervisor itself. That needs the Supervisor's **manager** permission (it was **backup**); the agent uses it only for that and for backups, nothing else (no restores, no installing add-ons, no host control). Home Assistant shows the add-on's security rating one point lower because of it.
+
 ## 0.20.2
 
 - **Remote support: dashboards load.** A page that loads many files at once (dashboards with custom cards) no longer fails with "Error while loading page lovelace": its requests wait their turn on the box instead of being refused past 64. Home Assistant Cloud's status, which every page reads, is no longer refused (signing in to it and turning its remote access on still are). The page reporting its own errors is no longer listed in the session's log.

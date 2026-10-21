@@ -1,5 +1,5 @@
 name: keep agent
-version: "0.20.2"
+version: "0.20.3"
 slug: keep_agent
 description: Connects this Home Assistant to keep. It only dials out, so nothing is opened to the internet.
 url: https://github.com/josephafrangieh/keep-addons
@@ -10,9 +10,11 @@ image: ghcr.io/josephafrangieh/keep-agent
 startup: application
 boot: auto
 homeassistant_api: true
-# Backups only: make, list and download them (no restore, no add-on or host control).
+# Supervisor: the agent only makes, lists and reads backups, and asks it to look for updates
+# ("Check for updates" from keep's admin). That last one needs the manager role; the agent's
+# code never uses it for anything else (no restores, no installing add-ons, no host control).
 hassio_api: true
-hassio_role: backup
+hassio_role: manager
 ingress: true
 ingress_port: 8099
 # Local access for the keep app and wall panels on the home Wi-Fi (signed requests only; see DOCS.md).

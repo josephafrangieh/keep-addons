@@ -23,6 +23,7 @@ The keep page lists every device, grouped by type and room, each with a switch. 
 
 keep can read states and history, control devices, manage lock codes and NFC cards, and read automations.
 The agent refuses services that could damage the box whatever the cloud asks: Supervisor and backups, updates, restarts, history purges, shell and script commands, raw MQTT, and Z-Wave/Zigbee network management.
+The add-on has the Supervisor's **manager** permission only so it can ask the Supervisor to look for updates (keep's "Check for updates"); it uses it for that and for backups, nothing else.
 The one exception, while **Let keep install updates** is on: Keep staff may install an update Home Assistant itself offers (Core, OS, add-ons, integrations, firmware), after a backup where it can make one. Never a chosen version, never anything else.
 
 ## Remote support

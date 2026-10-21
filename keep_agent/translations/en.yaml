@@ -8,6 +8,12 @@ configuration:
   allow_updates:
     name: Let keep install updates
     description: Keep staff may install Home Assistant's updates (Core, OS, add-ons, integrations) from keep's admin, one at a time, after a backup. Turn off to manage updates yourself.
+  allow_remote_support:
+    name: Allow remote support
+    description: Keep staff may work in this Home Assistant only after you approve their request in the keep app and type the code they give you, until the time you set or until you end it. Cameras stay private unless you allow them for that session. Turn off to refuse every remote session.
+  ha_url:
+    name: Home Assistant address (remote support)
+    description: Only if Home Assistant serves https itself. Leave empty for http://homeassistant:8123.
   go2rtc_url:
     name: go2rtc address
     description: Only if live video isn't found by itself (Frigate's built-in go2rtc and the go2rtc add-on are).

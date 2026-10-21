@@ -25,6 +25,25 @@ keep can read states and history, control devices, manage lock codes and NFC car
 The agent refuses services that could damage the box whatever the cloud asks: Supervisor and backups, updates, restarts, history purges, shell and script commands, raw MQTT, and Z-Wave/Zigbee network management.
 The one exception, while **Let keep install updates** is on: Keep staff may install an update Home Assistant itself offers (Core, OS, add-ons, integrations, firmware), after a backup where it can make one. Never a chosen version, never anything else.
 
+## Remote support
+
+Keep staff can't reach this Home Assistant from outside on their own: no port is open and no VPN is needed. When you need keep's help (a new sensor, a change), a session works like this:
+
+1. A Keep staff member asks from keep's admin. You get a notification in the keep app with who is asking, why, and for how long.
+2. You approve it in the app (Face ID), choosing how long and whether cameras may be seen.
+3. The staff member gives you a 6-digit code (by phone, for example); you type it in the app. Only then does the session open.
+
+During the session:
+
+- The box makes a Home Assistant user for that session only (named "keep support · <name>") and deletes it when the session ends, which ends every login made with it. Nobody ever knows its password.
+- Home Assistant's screen reaches the staff member through the box's own connection to keep.
+- **Cameras stay private** unless you allowed them: camera pictures, live video, recordings and camera add-ons (Frigate, go2rtc…) are refused by the box.
+- Some things are never possible: downloading or restoring backups, making users or access tokens, and shell add-ons (Terminal & SSH, Studio Code Server…).
+- The keep app and your wall panels show that keep is working in your Home Assistant, until when.
+- You can give more time or end it at any moment from the app. When its time is up, the box ends it by itself, even without internet.
+
+What was done (settings changed, devices added, what was refused) is recorded **on this box only**; you can read it in the app. Turn off **Allow remote support** to refuse every session.
+
 ## The keep app at home
 
 On the home network the keep app talks to this box directly on port **8125**, without going through the internet. It still needs the internet once to sign in and receive its pass; after that, lights, locks, climate and cameras keep working at home even when the internet is down.
@@ -76,6 +95,8 @@ actions:
 | `gateway_url` | `wss://keep-gateway.fly.dev/agent` | keep's gateway. Change only if keep asks you to. |
 | `log_level` | `info` | `debug` shows each request. |
 | `allow_updates` | `true` | **Let keep install updates**: Keep staff may install Home Assistant's updates from keep's admin. Turn off to manage updates yourself. |
+| `allow_remote_support` | `true` | **Allow remote support**: sessions you approve in the keep app (see above). Turn off to refuse them all. |
+| `ha_url` | (empty) | Home Assistant's own address for remote support, only if it serves https itself. Empty means `http://homeassistant:8123`. |
 
 ## Privacy
 

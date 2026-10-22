@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.20.4
+
+- **Remote support on any Home Assistant setup.** The box no longer assumes Home Assistant's web server is at http://homeassistant:8123: it asks the Supervisor for the port and whether Home Assistant serves https itself (its own certificate), and tries both. It also checks this ahead, so keep's admin shows the reason before anyone asks the owner, instead of "the box isn't connected". `ha_url` still overrides it.
+
 ## 0.20.3
 
 - **Check for updates finds new add-on versions.** Home Assistant refuses to pass "look for updates" on for an add-on, so the agent now asks the Supervisor itself. That needs the Supervisor's **manager** permission (it was **backup**); the agent uses it only for that and for backups, nothing else (no restores, no installing add-ons, no host control). Home Assistant shows the add-on's security rating one point lower because of it.

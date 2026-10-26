@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.21.0
+
+- **keep's thermostat presets stand alone.** The box always sets the thermostat's temperature itself: a preset's home temperature, or its away temperature when keep says everyone is away (binary_sensor.keep_anyone_home). A Versatile Thermostat's own presets and presence sensor are no longer used or changed, so a presence sensor set up there can't keep the heating at home temperature while everyone is away. It still regulates, and still handles an open window or a quiet sensor on its own. Thermostats left on one of its presets move to keep's temperature at once.
+- **Lighter widget requests.** keep can ask for only the devices a widget shows, instead of every state in the home.
+- **Guests.** keep's app can say guests are home: binary_sensor.keep_guests_home turns on, and while it is, binary_sensor.keep_anyone_home stays on and sensor.keep_people_home counts them as one, so automations and keep's thermostats treat the home as occupied whoever else is away.
+- **Recordings by day.** keep can ask Frigate for one day's detections (after/before), without their pictures (fetched one by one).
+
 ## 0.20.4
 
 - **Remote support on any Home Assistant setup.** The box no longer assumes Home Assistant's web server is at http://homeassistant:8123: it asks the Supervisor for the port and whether Home Assistant serves https itself (its own certificate), and tries both. It also checks this ahead, so keep's admin shows the reason before anyone asks the owner, instead of "the box isn't connected". `ha_url` still overrides it.

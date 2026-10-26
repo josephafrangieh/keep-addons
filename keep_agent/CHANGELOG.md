@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.24.0
+
+- **Timers.** The keep app can turn a light, a switch or a fan on for a while (the water heater for 15 minutes): the box turns it on, then off when the time is up, even without internet, and also after a restart. Turned off by someone else, the timer simply ends. The box keeps the timers people used, to start them again in one tap. While a timer runs, the box tells keep when its device goes off, so the timer on people's lock screens ends too.
+- **TV power through an IR blaster.** A Remote card can turn its TV on (and off) with an IR blaster's learned command (device/command), for TVs their integration can't turn on. Also on the home network.
+
 ## 0.23.0
 
 - **Check for updates without the wait.** keep's admin starts the look for new versions on the box and follows it, instead of waiting for the Supervisor to re-read every add-on repository in one go (which could take over a minute and time out, leaving the list behind). Home Assistant's update list is also refreshed a second time a few seconds later, so a new add-on version that shows up late isn't missed.

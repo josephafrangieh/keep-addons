@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.22.0
+
+- **TV remote at home.** The keep app's Remote card works on the home network too: volume, mute, apps and inputs, next and previous on a TV or media player, and its remote's keys (arrows, OK, Back, Home…) by their own names. Only on devices shared with keep and placed on a Remote card.
+
 ## 0.21.0
 
 - **keep's thermostat presets stand alone.** The box always sets the thermostat's temperature itself: a preset's home temperature, or its away temperature when keep says everyone is away (binary_sensor.keep_anyone_home). A Versatile Thermostat's own presets and presence sensor are no longer used or changed, so a presence sensor set up there can't keep the heating at home temperature while everyone is away. It still regulates, and still handles an open window or a quiet sensor on its own. Thermostats left on one of its presets move to keep's temperature at once.

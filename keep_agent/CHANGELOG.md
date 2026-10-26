@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.23.0
+
+- **Check for updates without the wait.** keep's admin starts the look for new versions on the box and follows it, instead of waiting for the Supervisor to re-read every add-on repository in one go (which could take over a minute and time out, leaving the list behind). Home Assistant's update list is also refreshed a second time a few seconds later, so a new add-on version that shows up late isn't missed.
+
 ## 0.22.0
 
 - **TV remote at home.** The keep app's Remote card works on the home network too: volume, mute, apps and inputs, next and previous on a TV or media player, and its remote's keys (arrows, OK, Back, Home…) by their own names. Only on devices shared with keep and placed on a Remote card.

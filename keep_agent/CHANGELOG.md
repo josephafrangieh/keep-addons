@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.25.0
+
+- **Why the alarm went off.** The alarm's notification now says what set it off: the doors, windows and motion sensors (shared with keep) that tripped in the minutes before, with their times, and what the alarm still lists as open (Alarmo). For example: "Front door opened at 14:02:31, then Hall motion detected movement at 14:02:40."
+- **Every camera when the alarm goes off.** The box takes a picture of each shared camera (six at most) at that moment. As before, the pictures stay on the box for 24 hours and keep fetches them when a phone shows the notification.
+
 ## 0.24.0
 
 - **Timers.** The keep app can turn a light, a switch or a fan on for a while (the water heater for 15 minutes): the box turns it on, then off when the time is up, even without internet, and also after a restart. Turned off by someone else, the timer simply ends. The box keeps the timers people used, to start them again in one tap. While a timer runs, the box tells keep when its device goes off, so the timer on people's lock screens ends too.

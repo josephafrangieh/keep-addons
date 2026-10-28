@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.25.3
+
+- **A wrong `frigate_url` no longer blocks recordings.** If the address set in the options doesn't answer as Frigate's API (go2rtc's port 1984, say), the box tries its port 5000 and finds Frigate by itself as usual. The option's description now says which port is meant.
+
 ## 0.25.2
 
 - **Why recordings' pictures and clips fail.** When Frigate isn't reached directly and Home Assistant's Frigate proxy fails too, the error now says what each address the box tried answered (name not found, refused, timed out, an HTTP status), so the right `frigate_url` is easy to set. Home Assistant's own host on port 5000 is tried too.

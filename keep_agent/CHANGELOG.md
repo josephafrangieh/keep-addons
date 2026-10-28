@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.25.1
+
+- **Recordings' pictures and clips on more setups.** The box now finds Frigate where Home Assistant's Frigate integration reaches it (the address its entry is named after), or as any installed Frigate add-on, whatever its repository, instead of only the usual add-on addresses. Before, a Frigate it didn't find was reached through Home Assistant's Frigate proxy, which fails on some setups: no thumbnails, snapshots or clips. If the proxy's notification path fails, its thumbnail and snapshot paths are tried too. The add-on's log says when Frigate wasn't reached directly, and what was tried.
+
 ## 0.25.0
 
 - **Why the alarm went off.** The alarm's notification now says what set it off: the doors, windows and motion sensors (shared with keep) that tripped in the minutes before, with their times, and what the alarm still lists as open (Alarmo). For example: "Front door opened at 14:02:31, then Hall motion detected movement at 14:02:40."

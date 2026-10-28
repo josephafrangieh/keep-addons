@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.25.2
+
+- **Why recordings' pictures and clips fail.** When Frigate isn't reached directly and Home Assistant's Frigate proxy fails too, the error now says what each address the box tried answered (name not found, refused, timed out, an HTTP status), so the right `frigate_url` is easy to set. Home Assistant's own host on port 5000 is tried too.
+
 ## 0.25.1
 
 - **Recordings' pictures and clips on more setups.** The box now finds Frigate where Home Assistant's Frigate integration reaches it (the address its entry is named after), or as any installed Frigate add-on, whatever its repository, instead of only the usual add-on addresses. Before, a Frigate it didn't find was reached through Home Assistant's Frigate proxy, which fails on some setups: no thumbnails, snapshots or clips. If the proxy's notification path fails, its thumbnail and snapshot paths are tried too. The add-on's log says when Frigate wasn't reached directly, and what was tried.

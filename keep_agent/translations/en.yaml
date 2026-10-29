@@ -19,4 +19,4 @@ configuration:
     description: Only if live video isn't found by itself (Frigate's built-in go2rtc and the go2rtc add-on are).
   frigate_url:
     name: Frigate address
-    description: Only if recordings aren't found by itself.
+    description: "Only if recordings' pictures and clips aren't found by themselves: Frigate's API, port 5000 (e.g. http://ccab4aaf-frigate-fa:5000), not go2rtc's 1984."

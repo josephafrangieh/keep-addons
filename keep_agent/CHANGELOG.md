@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.26.0
+
+- **Reminders.** The keep app's people can make reminders ("take the medicine") at a time, every day, on days of the week or on dates of the month (a date a month doesn't have: its last day), for the people they choose. The box runs them and keeps each day: it sends the reminder at its time, again every few minutes until someone answers (done, later, not today), and marks a day without an answer as missed at midnight. 90 days are kept per reminder, on the box only.
+
 ## 0.25.3
 
 - **A wrong `frigate_url` no longer blocks recordings.** If the address set in the options doesn't answer as Frigate's API (go2rtc's port 1984, say), the box tries its port 5000 and finds Frigate by itself as usual. The option's description now says which port is meant.
